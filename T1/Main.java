@@ -1,9 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         // cria uma instância da classe Calculadora
-        CalculatorTest test = new CalculatorTest();
+        Calculator calc = new Calculator();
         
-        test.setUp();
-        test.testPowAndMultiplication();
+        // chama os métodos de soma e multiplicação
+        int resultadoSoma = calc.sum(5, 3);
+        int resultadoMult = calc.multiplication(5, 3);
+        int resultadoPow = calc.pow(5, 2);
+        
+        // imprime os resultados
+        System.out.println("Resultado da soma: " + resultadoSoma);
+        System.out.println("Resultado da multiplicação: " + resultadoMult);
+        System.out.println("Resultado da potenciação: " + resultadoPow);
     }
 }
