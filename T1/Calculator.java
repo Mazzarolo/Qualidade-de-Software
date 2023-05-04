@@ -16,11 +16,7 @@ public class Calculator {
     }
 
     public double pow(double base, int exp) {
-        double res = 1;
-        for (int i = 0; i < exp; i++) {
-            res = multiplication(res, base);
-        }
-        return res;
+        return Math.pow(base, exp);
     }
 
     public double sqrt(double num) {

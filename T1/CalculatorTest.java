@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -87,5 +87,18 @@ public class CalculatorTest {
 
         assertEquals(r1, calc.bhaskara(a, b, c)[0], 0);
         assertEquals(r2, calc.bhaskara(a, b, c)[1], 0);
+    }
+
+    // Testes de Performance, tipos de testes não funcionais que verificam o desempenho de trechos do codigo e se eles estão de acordo com o que é almejado
+
+    @Test
+    public void testFatorialPerformance() {
+        long startTime = System.nanoTime();
+
+        calc.fatorial(1000000);
+
+        long duration = (System.nanoTime() - startTime);
+
+        assertTrue("Tempo de execução foi superior a 1 segundo", duration < (long) Math.pow(10, 9));
     }
 }
